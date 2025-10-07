@@ -1,191 +1,131 @@
-/* GENEL AYARLAR (Tüm sayfayı kapsar) */
-body {
-    /* Arka plan görselini buraya ekle. Dosya adının 'background.jpg' olduğunu varsaydım. */
-    background-image: url('background.jpg'); 
-    background-size: cover;
-    background-position: center bottom; /* Görselin alt kısmını göstermek için */
-    background-repeat: no-repeat;
-    background-color: #386f91; /* Görsel yüklenmezse görünen renk */
-    
-    font-family: 'Roboto', sans-serif; /* Yukarıda bağladığımız font */
-    color: white; /* Varsayılan metin rengi */
-    text-align: center;
+/* Genel Ayarlar ve Fontlar */
+* {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Ekranın tamamını kapla */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* İçeriği dağıt */
-}
-
-/* ------------------- SAHTE TARAYICI ÇUBUĞU STİLİ ------------------- */
-.browser-header {
-    background-color: #f7f7f7;
-    color: black;
-    width: 100%;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-sizing: border-box;
-    font-size: 14px;
+    font-family: Arial, sans-serif;
 }
 
-.url-bar {
-    flex-grow: 1;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-right: 15px;
+body {
+    background: linear-gradient(135deg, #001f3f, #0074d9); /* Koyu Mavi Profesyonel Arka Plan */
+    color: #fff;
     display: flex;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.lock-icon {
-    color: #4CAF50; /* Yeşil kilit */
-    margin-right: 5px;
-}
-
-.url-text {
-    font-weight: 500;
-}
-
-.plus-icon, .tab-icon {
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 15px;
-}
-
-/* ------------------- ANA İÇERİK STİLİ ------------------- */
-.content-area {
-    padding-top: 50px; /* Tarayıcı çubuğunun altından başla */
-    max-width: 400px;
-    width: 90%;
-}
-
-.language-select {
-    display: inline-flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-.globe-icon {
-    margin-right: 5px;
-    font-size: 1.2em;
-}
-
-.arrow-down {
-    margin-left: 10px;
-}
-
-.logo {
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-}
-
-.slogan {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px black;
-    margin-bottom: 30px;
-}
-
-/* Yeşil Buton Stili */
-.green-button {
-    background: linear-gradient(to top, #4CAF50, #66BB6A); /* Gradyan yeşil */
-    color: white;
-    font-size: 1.3em;
-    font-weight: bold;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 5px 0 #388E3C, inset 0 2px 0 #A5D6A7; /* 3D efekti */
-    cursor: pointer;
-    width: 95%; /* Genişlik ayarı */
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    transition: all 0.1s;
-}
-
-.green-button:active {
-    box-shadow: 0 2px 0 #388E3C, inset 0 2px 0 #A5D6A7;
-    transform: translateY(3px);
-}
-
-.download-text {
-    margin-top: 20px;
-    font-size: 1.1em;
-    text-shadow: 1px 1px 2px black;
-    margin-bottom: 10px;
-}
-
-/* Google Play Butonu Stili */
-.google-play-button {
-    background-color: #212121;
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 8px;
-    padding: 5px 20px 5px 10px;
-    cursor: pointer;
-    text-align: left;
-    margin-bottom: 50px;
-    font-size: 0.9em;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.google-play-button .play-logo {
-    width: 30px; /* İndir görselinin boyutu */
-    height: 30px;
-    margin-right: 10px;
-}
-
-.google-play-button p {
-    margin: 0;
-    line-height: 1.2;
-}
-
-/* ------------------- ALT BİLGİ STİLİ ------------------- */
-.page-footer {
+.container {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.8em;
+    max-width: 600px;
+    background: #ffffff; /* Beyaz İçerik Kutusu */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Derinlik Hissi */
+    color: #333; /* Koyu Yazı Rengi */
 }
 
-.page-footer a {
-    color: white;
-    text-decoration: none;
-    padding: 0 5px;
-}
-
-/* ------------------- ŞAKA AMAÇLI MESAJ STİLİ ------------------- */
-#error-message {
-    position: fixed; /* Ekranın üstünde kalır */
-    top: 0;
-    width: 100%;
-    background-color: #f44336; /* Kırmızı hata rengi */
-    color: white;
-    padding: 10px 0;
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
     text-align: center;
-    font-weight: bold;
-    z-index: 1000; /* Her şeyin üstünde olmasını sağlar */
-    transition: opacity 0.5s;
+    color: #0074d9; /* Mavi Başlık */
 }
 
-.hidden {
-    opacity: 0;
-    pointer-events: none; /* Tıklamayı engelle */
+#quiz-area {
+    padding: 20px 0;
+}
+
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Cevap Butonları */
+#answer-buttons button {
+    width: 100%;
+    background: #f0f0f0;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#answer-buttons button:hover:not([disabled]) {
+    background: #e0e0e0;
+}
+
+/* Doğru/Yanlış Durumları */
+.correct {
+    background: #4CAF50 !important; /* Yeşil */
+    color: white !important;
+}
+
+.incorrect {
+    background: #f44336 !important; /* Kırmızı */
+    color: white !important;
+}
+
+/* Sonraki Buton */
+#next-btn {
+    display: block;
+    margin: 30px auto 0;
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover:not([disabled]) {
+    background: #005bb5;
+}
+
+#next-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Skor Alanı ve Tekrar Başla Butonu */
+#score-area {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#final-score {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#restart-btn {
+    background: #ff9800; /* Turuncu */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-btn:hover {
+    background: #e68900;
+}
+
+/* Gizleme Sınıfı */
+.hide {
+    display: none;
 }
