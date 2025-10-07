@@ -3,56 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clash of Clans</title>
+    <title>Geliştirici Bilgi Yarışması Portalı</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div id="error-message" class="hidden">
-        Bağlantı Hatası: Klan sunucusu meşgul. Lütfen tekrar deneyin.
+    <div class="container">
+        <h1>Geliştirici Sınavı</h1>
+        <div id="quiz-area">
+            <h2 id="question">Soru metni buraya gelecek.</h2>
+            <div id="answer-buttons">
+                </div>
+            <button id="next-btn" disabled>Sonraki Soru</button>
+        </div>
+        <div id="score-area" class="hide">
+            <h2>Sınav Tamamlandı!</h2>
+            <p id="final-score"></p>
+            <button id="restart-btn">Tekrar Başla</button>
+        </div>
     </div>
-
-    <header class="browser-header">
-        <div class="url-bar">
-            <span class="lock-icon">🔒</span>
-            <span class="url-text">clashofclans.com</span>
-        </div>
-        <div class="plus-icon">+</div>
-        <div class="tab-icon">9</div>
-    </header>
-
-    <main class="content-area">
-        
-        <div class="language-select">
-            <span class="globe-icon">🌐</span>
-            <span class="lang-text">Türkçe</span>
-            <span class="arrow-down">∨</span>
-        </div>
-
-        <img src="clash_of_clans_logo.png" alt="Clash of Clans Logo" class="logo">
-        
-        <p class="slogan">Klanını Zafere Taşı!</p>
-
-        <button id="open-app-button" class="green-button">
-            Clash of Clans'ı aç
-        </button>
-
-        <p class="download-text">Clash of Clans'ı indir</p>
-        
-        <div class="google-play-button">
-            <img src="google_play_logo.png" alt="Google Play İndir" class="play-logo">
-            <p>İNDİRİN <br> **Google Play**</p>
-        </div>
-    </main>
-
-    <footer class="page-footer">
-        <a href="#">Ebeveyn Kılavuzu</a>
-        <a href="#">Koşullar ve Hizmet</a>
-        <a href="#">Gizlilik Politikası</a>
-    </footer>
-
     <script src="script.js"></script>
-
 </body>
 </html>
