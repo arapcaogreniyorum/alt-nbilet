@@ -1,22 +1,142 @@
+/* Genel Ayarlar ve Fontlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #001f3f, #0074d9); /* Koyu Mavi Profesyonel Arka Plan */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff; /* Beyaz İçerik Kutusu */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Derinlik Hissi */
+    color: #333; /* Koyu Yazı Rengi */
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #0074d9; /* Mavi Başlık */
+}
+
+#quiz-area {
+    padding: 20px 0;
+}
+
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Cevap Butonları */
+#answer-buttons button {
+    width: 100%;
+    background: #f0f0f0;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    /* Metin yönünü JS ile RTL olarak ayarlananlar için sağa hizalayacağız. */
+    text-align: left; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#answer-buttons button:hover:not([disabled]) {
+    background: #e0e0e0;
+}
+
+/* Doğru/Yanlış Durumları */
+.correct {
+    background: #4CAF50 !important; /* Yeşil */
+    color: white !important;
+}
+
+.incorrect {
+    background: #f44336 !important; /* Kırmızı */
+    color: white !important;
+}
+
+/* Sonraki Buton */
+#next-btn {
+    display: block;
+    margin: 30px auto 0;
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#next-btn:hover:not([disabled]) {
+    background: #005bb5;
+}
+
+#next-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Skor Alanı ve Tekrar Başla Butonu */
+#score-area {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#final-score {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#restart-btn {
+    background: #ff9800; /* Turuncu */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-btn:hover {
+    background: #e68900;
+}
+
+/* Gizleme Sınıfı */
+.hide {
+    display: none;
+}
+
 /* ************************************** */
 /* ARAPÇA (RTL) METİN YÖNÜ DESTEĞİ */
 /* ************************************** */
-/* script.js dosyasında Arapça cevapları içeren butonlara bu sınıfı ekledik. */
+
+/* Bu sınıf JS'de Arapça metin içeren cevap butonlarına eklenir. */
 .rtl-text {
-    /* Metin yönünü sağdan sola ayarlar */
-    direction: rtl; 
-    /* Metnin hizalamasını sağa yaslar */
-    text-align: right; 
-    /* Metnin sağa yaslanması için düğmelerdeki varsayılan text-align: left kuralını geçersiz kılar */
-}
-
-/* Cevap butonlarının genel text-align ayarını RTL için geçersiz kılıyoruz */
-#answer-buttons button {
-    /* Mevcut ayarınız: text-align: left; */
-    text-align: left; /* Türkçe/Latince metinler için kalsın */
-}
-
-/* Ancak, RTL metin içeren düğmeler sağa hizalanmalıdır. */
-#answer-buttons button.rtl-text {
-    text-align: right; 
+    direction: rtl; /* Metin yönünü sağdan sola ayarlar */
+    text-align: right !important; /* Cevap metnini sağa yaslar */
 }
