@@ -223,6 +223,14 @@ const questions = [
   }
 ];
 
+// Dizideki elemanları rastgele karıştıran yardımcı fonksiyon (Fisher-Yates algoritması)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 // **************************************************
 // HTML ELEMENTLERİ VE QUIZ MANTIĞI
 // **************************************************
@@ -243,6 +251,8 @@ let score = 0;
 function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+    // Soruları rastgele sırala
+    shuffleArray(questions); 
     nextButton.innerHTML = "Sonraki Soru";
     quizArea.classList.remove('hide');
     scoreArea.classList.add('hide');
