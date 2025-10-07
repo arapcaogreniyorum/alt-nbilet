@@ -1,0 +1,38 @@
+[
+  {
+    "question": "Web siteleri için standart işaretleme dili nedir?",
+    "answers": [
+      {"text": "Python", "isCorrect": false},
+      {"text": "HTML", "isCorrect": true},
+      {"text": "SQL", "isCorrect": false},
+      {"text": "C++", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Bir web sayfasının stilini belirleyen teknoloji hangisidir?",
+    "answers": [
+      {"text": "JavaScript", "isCorrect": false},
+      {"text": "PHP", "isCorrect": false},
+      {"text": "CSS", "isCorrect": true},
+      {"text": "TypeScript", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "JavaScript'te bir değişken tanımlamak için genellikle hangi anahtar kelime kullanılır?",
+    "answers": [
+      {"text": "string", "isCorrect": false},
+      {"text": "var", "isCorrect": false},
+      {"text": "const veya let", "isCorrect": true},
+      {"text": "def", "isCorrect": false}
+    ]
+  },
+  {
+    "question": "Veritabanından bilgi sorgulamak için kullanılan dil nedir?",
+    "answers": [
+      {"text": "NoSQL", "isCorrect": false},
+      {"text": "AJAX", "isCorrect": false},
+      {"text": "JSON", "isCorrect": false},
+      {"text": "SQL", "isCorrect": true}
+    ]
+  }
+]
