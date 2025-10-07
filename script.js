@@ -63,7 +63,7 @@ const questions = [
     "answers": [
       {"text": "قديمةٌ", "isCorrect": true},
       {"text": "قديمون", "isCorrect": false},
-      {"text": "قديمatٌ", "isCorrect": false},
+      {"text": "قديماتٌ", "isCorrect": false},
       {"text": "قديمٌ", "isCorrect": false}
     ]
   },
@@ -263,7 +263,7 @@ function showQuestion() {
         button.innerHTML = answer.text;
         button.classList.add("btn");
         
-        // Cevap doğruysa veri setine işaretle (isCorrect kullanıyoruz)
+        // Cevap doğruysa veri setine işaretle 
         if (answer.isCorrect) {
             button.dataset.isCorrect = answer.isCorrect;
         }
@@ -277,7 +277,6 @@ function showQuestion() {
 
 // Cevap butonlarını ve Next butonunu temizleyen fonksiyon
 function resetState() {
-    // Soru gösterilirken "Sonraki Soru" butonu gizli ve devre dışı kalmalı.
     nextButton.classList.add('hide'); 
     nextButton.disabled = true;
 
